@@ -1,0 +1,53 @@
+{
+	"name": "@fromforgesoftware/angular-kit",
+	"version": "0.1.0",
+	"description": "Angular toolkit — jsonapi client, log, storage, ui, resource-state-manager. Dormant until reactivated.",
+	"type": "module",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		},
+		"./jsonapi": {
+			"types": "./dist/jsonapi/index.d.ts",
+			"import": "./dist/jsonapi/index.js"
+		},
+		"./log": {
+			"types": "./dist/log/index.d.ts",
+			"import": "./dist/log/index.js"
+		},
+		"./storage": {
+			"types": "./dist/storage/index.d.ts",
+			"import": "./dist/storage/index.js"
+		},
+		"./ui": {
+			"types": "./dist/ui/index.d.ts",
+			"import": "./dist/ui/index.js"
+		},
+		"./resource-state-manager": {
+			"types": "./dist/resource-state-manager/index.d.ts",
+			"import": "./dist/resource-state-manager/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"sideEffects": false,
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com",
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fromforgesoftware/angular-kit.git"
+	},
+	"peerDependencies": {
+		"@angular/common": "^19.0.0 || ^20.0.0",
+		"@angular/core": "^19.0.0 || ^20.0.0",
+		"@fromforgesoftware/ts-kit": "^0.1.0",
+		"rxjs": "^7.0.0"
+	}
+}

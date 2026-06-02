@@ -1,0 +1,26 @@
+<div [class]="getContainerClasses()">
+	@for (tab of tabsCmp.tabs(); track $index) {
+		<button
+			#tabButton
+			mmcButton
+			size="sm"
+			variant="ghost"
+			(click)="tabsCmp.selectTab($index)"
+			[class]="getTabButtonClasses($index)"
+		>
+			<div [class]="getInnerClasses($index)">
+				@if (tab.icon()) {
+					<mmc-icon size="sm" [name]="tab.icon() || ''" />
+				}
+				@if (tab.name()) {
+					<span> {{ tab.name() }} </span>
+				}
+				@if (tab.badge()) {
+					<mmc-badge variant="secondary" class="ml-1 rounded-md px-1.5 py-0.5 text-xs font-medium">
+						{{ tab.badge() }}
+					</mmc-badge>
+				}
+			</div>
+		</button>
+	}
+</div>
